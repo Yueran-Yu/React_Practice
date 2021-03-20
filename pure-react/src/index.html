@@ -16,6 +16,7 @@
 <!--  Two packages React and React Dom-->
 <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="map_reduce.js"></script>
 <script>
 
 
@@ -31,7 +32,7 @@
     }
   }
 
-  const Person = (props) => {
+  const Person = props => {
     return React.createElement('div', {}, [
       React.createElement('h1', {}, props.name),
       React.createElement('p', {}, props.occupation)

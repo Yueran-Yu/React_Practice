@@ -13,7 +13,7 @@ class App extends React.Component {
   handleClick = () => {
     // first parameter: a function, second parameter: a callback function
     // anytime you want to update state, you should use a function instead of an object
-    this.setState((prevState, prevProps) => ({meaningOfLife: prevState.meaningOfLife + 1}), () => console.log(this.state.meaningOfLife))
+    this.setState((prevState, prevProps) => ({meaningOfLife: prevState.meaningOfLife + prevProps.increment}), () => console.log(this.state.meaningOfLife))
   }
   render() {
     return (

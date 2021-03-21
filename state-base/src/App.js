@@ -6,7 +6,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      meaningOfLife: 47
+      meaningOfLife: 47 + this.props.increment
     }
   }
   // use arrow function so there will be no issue with 'this' keyword

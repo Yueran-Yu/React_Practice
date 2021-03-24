@@ -5,7 +5,8 @@ import {Route, Link} from "react-router-dom";
 const HomePage = props => {
   return (
       <div>
-        <Link to='/topics'>Topics</Link>
+        {/*<Link to='/topics'>Topics</Link>*/}
+        <button onClick={() => props.history.push('topics')}>Topic</button>
         <h1>HOME PAGE</h1>
       </div>
   )

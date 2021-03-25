@@ -8,13 +8,21 @@ const HomePage = props => {
         {/*<Link to='/topics'>Topics</Link>*/}
         <button onClick={() => props.history.push('topics')}>Topic</button>
         <h1>HOME PAGE</h1>
+
       </div>
   )
 }
 
-const TopicList = () => {
+const TopicList = props => {
+  console.log(props)
   return (
-      <div><h1>TOPIC LIST PAGE</h1></div>
+      <div>
+        <h1>TOPIC LIST PAGE</h1>
+        <Link to={`${props.match.url}/13`}>TO 13</Link><br/>
+        <Link to={`${props.match.url}/15`}>TO 15</Link><br/>
+        <Link to={`${props.match.url}/18`}>TO 18</Link><br/>
+        <Link to={`${props.match.url}/21`}>TO 21</Link>
+      </div>
   )
 }
 
@@ -29,8 +37,8 @@ function App() {
   return (
       <div className="App">
         <Route exact path='/' component={HomePage}/>
-        <Route exact path='/topics' component={TopicList}/>
-        <Route path='/topics/:topicId' component={TopicDetail}/>
+        <Route exact path='/happy/topics' component={TopicList}/>
+        <Route path='/happy/topics/:topicId' component={TopicDetail}/>
       </div>
   );
 }
